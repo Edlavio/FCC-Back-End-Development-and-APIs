@@ -1,0 +1,10 @@
+# Shortner
+POST http://localhost:5000/api/shorturl
+Content-Type: application/x-www-form-urlencoded
+
+url=https://github.com/Edlavio
+
+###
+
+# Getting a shortened URL will redirect you to https://edlavio.eu.org
+GET http://localhost:5000/api/shorturl/804119
