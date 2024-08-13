@@ -1,4 +1,4 @@
-![url-shortener-microservice](https://socialify.git.ci/Edlavio/url-shortener-microservice/image?font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Auto)
+![url-shortener-microservice](https://socialify.git.ci/Edlavio/FCC-Back-End-Development-and-APIs/image?font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Auto)
 
 A Url shortener microservice made during **FreeCodeCamp** [Back End Development and APIs course](https://www.freecodecamp.org/learn/back-end-development-and-apis).
 
