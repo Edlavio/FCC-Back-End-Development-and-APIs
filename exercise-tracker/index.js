@@ -71,9 +71,9 @@ app.post('/api/users/:_id/exercises', async (req, res) => {
         .json({ error: 'Description and duration is required' });
     }
 
-    if (!validateDateWithMoment(date)) {
-      return res.status(400).json({ error: 'Invalid date format' });
-    }
+    // if (!validateDateWithMoment(date)) {
+    //   return res.status(400).json({ error: 'Invalid date format' });
+    // }
 
     const user = await User.findById(_id);
 
@@ -111,14 +111,14 @@ app.get('/api/users/:_id/logs', async (req, res) => {
     const user = await User.findById(_id);
 
     if (!user) {
-      return res.status(404).json({ error: 'User not found!' });
+      return res.status(400).json({ error: 'User not found!' });
     }
 
     const exercise = await Exercise.find({ user: _id });
 
-    if (!exercise) {
-      return res.status(404).json({ error: 'Exercises not found!' });
-    }
+    // if (!exercise) {
+    //   return res.status(400).json({ error: 'Exercises not found!' });
+    // }
 
     res.status(200).json({
       _id: user._id,
