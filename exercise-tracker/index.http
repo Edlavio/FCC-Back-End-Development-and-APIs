@@ -17,12 +17,12 @@ username=edlavio
 ###
 
 # Create a new exercise
-POST http://localhost:5000/api/users/66b942de134ab7e911751b80/exercises
+POST http://localhost:5000/api/users/66df846f9736b48be7d947c0/exercises
 Content-Type: application/x-www-form-urlencoded
 
-description=Teste&duration=20&date=2028-08-09
+description=Teste&duration=20&date=2024-05-09
 
 ###
 
 # Get user logs
-GET http://localhost:5000/api/users/66b942de134ab7e911751b80/logs
+GET http://localhost:5000/api/users/66df846f9736b48be7d947c0/logs?from=2024-05-05&to=2024-05-10&limit=10

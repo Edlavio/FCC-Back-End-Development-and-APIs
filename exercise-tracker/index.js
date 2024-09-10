@@ -62,6 +62,10 @@ app.post('/api/users/:_id/exercises', async (req, res) => {
     const { _id } = req.params;
     const { description, duration, date } = req.body;
 
+    if (!_id) {
+      return res.status(400).json({ error: 'User id is required' });
+    }
+
     if (!mongoose.Types.ObjectId.isValid(_id)) {
       return res.status(400).json({ error: 'User id is invalid!' });
     }
@@ -103,6 +107,12 @@ app.post('/api/users/:_id/exercises', async (req, res) => {
 app.get('/api/users/:_id/logs', async (req, res) => {
   try {
     const { _id } = req.params;
+    const { from, to, limit } = req.query;
+    console.log('to:', to);
+
+    if (!_id) {
+      return res.status(400).json({ error: 'User id is required' });
+    }
 
     if (!mongoose.Types.ObjectId.isValid(_id)) {
       return res.status(400).json({ error: 'User id is invalid!' });
@@ -114,7 +124,23 @@ app.get('/api/users/:_id/logs', async (req, res) => {
       return res.status(400).json({ error: 'User not found!' });
     }
 
-    const exercise = await Exercise.find({ user: _id });
+    let exercise = await Exercise.find({ user: _id });
+
+    if (from) {
+      exercise = exercise.filter(
+        (exercise) => new Date(exercise.date) >= new Date(from)
+      );
+    }
+
+    if (to) {
+      exercise = exercise.filter(
+        (exercise) => new Date(exercise.date) <= new Date(to)
+      );
+    }
+
+    if (limit) {
+      exercise = exercise.slice(0, limit);
+    }
 
     // if (!exercise) {
     //   return res.status(400).json({ error: 'Exercises not found!' });
