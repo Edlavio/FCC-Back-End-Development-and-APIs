@@ -1,8 +1,6 @@
-![url-shortener-microservice](https://socialify.git.ci/Edlavio/FCC-Back-End-Development-and-APIs/image?font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Auto)
-
 A exercise tracker made during **FreeCodeCamp** [Back End Development and APIs course](https://www.freecodecamp.org/learn/back-end-development-and-apis).
 
-![Test sucess image](./public/sucess.png)
+![Test sucess image](https://github.com/user-attachments/assets/4db7294a-0dab-40a5-91c4-15ded27d49df)
 
 
 ## Test Scenario:
@@ -20,7 +18,7 @@ A exercise tracker made during **FreeCodeCamp** [Back End Development and APIs c
 - [x] The **description** property of any object in the **log** array that is returned from **GET** **/api/users/:_id/logs** should be a string.
 - [x] The duration property of any object in the log array that is returned from **GET** **/api/users/:_id/logs** should be a number.
 - [x] The **date** property of any object in the **log** array that is returned from **GET** **/api/users/:_id/logs** should be a string. Use the **dateString** format of the **Date** API.
-- [] You can add **from**, **to** and **limit** parameters to a GET **/api/users/:_id/logs** request to retrieve part of the log of any user. **from** and **to** are dates in **yyyy-mm-dd** format. **limit** is an integer of how many logs to send back.
+- [x] You can add **from**, **to** and **limit** parameters to a GET **/api/users/:_id/logs** request to retrieve part of the log of any user. **from** and **to** are dates in **yyyy-mm-dd** format. **limit** is an integer of how many logs to send back.
 
 ## Helpful resources
 
@@ -32,28 +30,6 @@ A exercise tracker made during **FreeCodeCamp** [Back End Development and APIs c
 ## How test
 
 You have examples of request in index.http you could use REST Client ou another tool.
-
-#### Shorten url request:
-
-```js
-POST
-https://url-shortener-uzv4.onrender.com/api/shorturl
-Content-Type: application/x-www-form-urlencoded
-
-// A url form encoded
-url=https://edlavio.eu.org
-```
-
-#### Getting shortened url:
-
-```js
-GET
-
-// After shorturl/put_here_short_url
-https://url-shortener-uzv4.onrender.com/api/shorturl/534447
-
-// Open in Browser and will redirect to https://github.com/Edlavio
-```
 
 ## How setup
 
