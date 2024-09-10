@@ -108,7 +108,6 @@ app.get('/api/users/:_id/logs', async (req, res) => {
   try {
     const { _id } = req.params;
     const { from, to, limit } = req.query;
-    console.log('to:', to);
 
     if (!_id) {
       return res.status(400).json({ error: 'User id is required' });
