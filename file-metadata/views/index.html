@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="html">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>File Metadata Microservice</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   </head>
   <body
@@ -12,24 +11,28 @@
   >
     <h1 class="text-3xl font-semibold">File Metadata Microservice</h1>
     <form
-      id="uploadForm"
       enctype="multipart/form-data"
       action="/api/fileanalyse"
       method="post"
       class="w-10/12 md:w-[450px] flex flex-col items-center justify-center gap-5 bg-slate-700 py-6 px-4 rounded-lg"
     >
+    <h3 id="output"></h3>
       <input
         type="file"
         name="upfile"
-        id="upfile"
         class="block w-full text-sm text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-600 hover:file:bg-blue-100"
       />
-      <button
+      <input
         type="submit"
+        value="Upload"
         class="w-full bg-white hover:bg-gray-200 text-black rounded-lg px-6 py-2.5 text-base font-semibold"
-      >
-        Upload
-      </button>
+      />
     </form>
+    <div class="footer">
+      <p>
+        by 
+        <a href="http://www.freecodecamp.com" class="text-blue-600">freeCodeCamp</a>
+      </p>
+    </div>
   </body>
 </html>

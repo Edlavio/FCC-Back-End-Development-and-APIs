@@ -1,17 +1,16 @@
 import express from 'express';
 import multer from 'multer';
-import path from 'path';
+import cors from "cors"
 
 const app = express();
+app.use(cors())
+
 const upload = multer({
   storage: multer.memoryStorage(),
 });
 
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'views')));
-
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+  res.sendFile(process.cwd() + '/views/index.html');
 });
 
 app.post('/api/fileanalyse', upload.single('upfile'), (req, res) => {
